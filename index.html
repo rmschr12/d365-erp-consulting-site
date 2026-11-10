@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ryan Schroeder D365 ERP Consulting | Microsoft Dynamics 365 F&O for Food & Beverage</title>
   <meta name="description" content="Expert Microsoft Dynamics 365 Finance & Operations implementation for food and beverage companies. Ryan Schroeder brings deep industry experience to every engagement." />
+  <link rel="canonical" href="https://rmschr12.github.io/d365-erp-consulting-site/" />
+  <meta name="theme-color" content="#0b1f3a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rmschr12.github.io/d365-erp-consulting-site/" />
+  <meta property="og:title" content="Ryan Schroeder | Dynamics 365 F&amp;O Consulting for Food &amp; Beverage" />
+  <meta property="og:description" content="Independent D365 Finance &amp; Operations functional consultant. Implementation, process manufacturing, finance and supply chain, upgrades, and post-go-live support." />
+  <meta property="og:image" content="https://rmschr12.github.io/d365-erp-consulting-site/ryan-headshot.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ryan Schroeder D365 ERP Consulting",
+    "url": "https://rmschr12.github.io/d365-erp-consulting-site/",
+    "image": "https://rmschr12.github.io/d365-erp-consulting-site/ryan-headshot.jpg",
+    "description": "Independent Microsoft Dynamics 365 Finance & Operations consulting for food and beverage and manufacturing companies.",
+    "areaServed": "US",
+    "founder": {
+      "@type": "Person",
+      "name": "Ryan Schroeder",
+      "jobTitle": "Dynamics 365 F&O Functional Consultant",
+      "sameAs": ["https://www.linkedin.com/in/ryan-schroeder-84912750"]
+    },
+    "knowsAbout": ["Microsoft Dynamics 365 Finance", "Dynamics 365 Supply Chain Management", "Process manufacturing", "Food and beverage ERP"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
@@ -1380,7 +1406,7 @@
         <div class="contact-info-items">
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 8.29 8.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Schedule a free discovery call
+            Free 30-minute discovery call: send a note and I'll reply with times
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1388,7 +1414,7 @@
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Available for engagements nationwide &amp; remote
+            Available now for contract and project work, nationwide &amp; remote
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -1403,6 +1429,8 @@
 
       <form class="contact-form" action="https://formspree.io/f/xvzlwgwn" method="POST">
         <h3>Send a Message</h3>
+        <input type="hidden" name="_subject" value="New inquiry from D365 consulting site" />
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" />
         <div class="form-row">
           <div class="form-group">
             <label>First Name</label>
@@ -1459,32 +1487,6 @@
       }
     });
   });
-
-  // Form submission handler (replace with your backend or form service)
-  function handleFormSubmit(btn) {
-    const form = btn.closest('.contact-form');
-    const inputs = form.querySelectorAll('input, select, textarea');
-    let valid = true;
-    inputs.forEach(input => {
-      if (!input.value.trim()) { valid = false; }
-    });
-    if (!valid) {
-      btn.textContent = '⚠ Please fill in all fields';
-      btn.style.background = '#c0392b';
-      btn.style.color = '#fff';
-      setTimeout(() => {
-        btn.textContent = 'Send Message →';
-        btn.style.background = '';
-        btn.style.color = '';
-      }, 2500);
-      return;
-    }
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = '#2ecc71';
-    btn.disabled = true;
-    // TODO: wire up to Formspree, EmailJS, or your preferred form backend
-    // e.g. fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: new FormData(form) })
-  }
 
   // Animate stats on scroll
   const observerOptions = { threshold: 0.2 };
